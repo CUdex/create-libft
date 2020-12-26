@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2020/12/24 10:21:28 by cryu             ###   ########.fr        #
+#    Updated: 2020/12/26 22:19:13 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,11 @@ SRC = main.c \
 	  ft_isprint.c \
 	  ft_toupper.c \
 	  ft_tolower.c \
-	  ft_atoi.c
+	  ft_atoi.c \
+	  ft_strncmp.c \
+	  ft_strlcat.c \
+	  ft_strlcpy.c \
+	  ft_strlen.c
 
 
 RM = rm -rf

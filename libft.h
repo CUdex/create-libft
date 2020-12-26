@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 00:26:22 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/24 10:28:02 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/26 22:17:26 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,10 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+size_t		ft_strlen(const char *s);
+size_t		ft_strlcpy(char *dst, const char *src, size_t n);
+size_t		ft_strlcat(char *dst, const char *src, size_t n);
 
 #endif
