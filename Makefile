@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2020/12/26 22:19:13 by cryu             ###   ########.fr        #
+#    Updated: 2020/12/27 17:25:03 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,10 @@ SRC = main.c \
 	  ft_strncmp.c \
 	  ft_strlcat.c \
 	  ft_strlcpy.c \
-	  ft_strlen.c
+	  ft_strlen.c \
+	  ft_strnstr.c \
+	  ft_strchr.c \
+	  ft_strrchr.c
 
 
 RM = rm -rf
