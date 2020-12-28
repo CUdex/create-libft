@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2020/12/28 00:19:16 by cryu             ###   ########.fr        #
+#    Updated: 2020/12/28 17:39:12 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,10 @@ SRC = main.c \
 	  ft_strchr.c \
 	  ft_strrchr.c \
 	  ft_memcmp.c \
-	  ft_memchr.c
+	  ft_memchr.c \
+	  ft_memmove.c \
+	  ft_memcpy.c \
+	  ft_memccpy.c
 
 
 RM = rm -rf

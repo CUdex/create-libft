@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 00:26:22 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/28 00:18:56 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/28 17:38:57 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,8 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t n);
 size_t		ft_strlcat(char *dst, const char *src, size_t n);
 
 void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
 #endif
