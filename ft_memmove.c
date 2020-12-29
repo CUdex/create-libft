@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 15:45:17 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/28 16:29:40 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/29 10:40:03 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned char *dst_chr;
-	unsigned char *src_chr;
-	size_t idx;
+	unsigned char	*dst_chr;
+	unsigned char	*src_chr;
+	size_t			idx;
 
 	dst_chr = (unsigned char *)dst;
 	src_chr = (unsigned char *)src;

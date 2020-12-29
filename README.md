@@ -7,3 +7,5 @@
 2020.12.27 strnstr, memcmp, memchr 구현.
 
 2020.12.28 memmove, memcpy, memccpy 구현.
+
+2020.12.29 part 2 시작, substr, strjoin, strtirm 구현.

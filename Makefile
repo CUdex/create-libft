@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2020/12/28 23:04:41 by cryu             ###   ########.fr        #
+#    Updated: 2020/12/29 12:29:20 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,10 @@ SRC = main.c \
 	  ft_memset.c \
 	  ft_bzero.c \
 	  ft_strdup.c \
-	  ft_calloc.c
+	  ft_calloc.c \
+	  ft_substr.c \
+	  ft_strjoin.c \
+	  ft_strtirm.c
 
 
 RM = rm -rf

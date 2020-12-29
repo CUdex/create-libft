@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/28 21:15:00 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/29 10:40:40 by cryu             ###   ########.fr       */
+/*   Created: 2020/12/29 10:02:54 by cryu              #+#    #+#             */
+/*   Updated: 2020/12/29 10:41:25 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	unsigned char *s_chr;
+	char	*tmp;
+	size_t	tmp_idx;
+	size_t	start_idx;
 
-	s_chr = s;
-	while (n)
+	tmp_idx = 0;
+	start_idx = (size_t)start;
+	if (s == 0 || ft_strlen(s) < start_idx)
+		return (0);
+	tmp = (char *)malloc(sizeof(char) * len + 1);
+	if (!tmp)
+		return (0);
+	while (tmp_idx < len)
 	{
-		*s_chr = c;
-		s_chr++;
-		n--;
+		tmp[tmp_idx] = s[start_idx + tmp_idx];
+		tmp_idx++;
 	}
-	return (s);
+	tmp[tmp_idx] = '\0';
+	return (tmp);
 }
