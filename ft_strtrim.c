@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 12:14:06 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/29 14:09:02 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/29 14:42:32 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end_idx;
 	size_t	tmp_idx;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (0);
 	start_idx = 0;
 	end_idx = ft_strlen(s1) - 1;
@@ -41,7 +41,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start_idx++;
 	while (ft_check(s1[end_idx], set) && start_idx < end_idx)
 		end_idx--;
-	if (!start_idx || !end_idx)
+	if (!start_idx && end_idx == ft_strlen(s1) - 1)
+		return (ft_strdup(s1));
+	if (start_idx >= end_idx)
 		return (0);
 	tmp = (char *)malloc(sizeof(char) * (end_idx - start_idx) + 1);
 	tmp_idx = 0;
