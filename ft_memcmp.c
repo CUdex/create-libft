@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 23:48:09 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/28 00:16:04 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/30 16:05:11 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,15 @@
 int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t idx;
+	unsigned char *s1_chr;
+	unsigned char *s2_chr;
 
 	idx = 0;
+	s1_chr = (unsigned char *)s1;
+	s2_chr = (unsigned char *)s2;
 	if (n == 0)
 		return (0);
-	while (idx < n && s1[idx] == *s2[idx])
+	while (idx < n && s1_chr[idx] == s2_chr[idx])
 		idx++;
-	return ((unsigned char)s1[idx] - (unsigned char)s2[idx]);
+	return (s1_chr[idx] - s2_chr[idx]);
 }

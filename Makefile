@@ -6,14 +6,13 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2020/12/29 12:29:20 by cryu             ###   ########.fr        #
+#    Updated: 2020/12/30 16:06:20 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC = main.c \
-	  ft_isalpha.c \
+SRC = ft_isalpha.c \
 	  ft_isdigit.c \
 	  ft_isalnum.c \
 	  ft_isascii.c \
@@ -39,17 +38,26 @@ SRC = main.c \
 	  ft_calloc.c \
 	  ft_substr.c \
 	  ft_strjoin.c \
-	  ft_strtirm.c
+	  ft_strtrim.c \
+	  ft_split.c
 
+CC = gcc
+
+CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
 
 OBJ = $(SRC:.c=.o)
 
+BOUNS_OBJ = $(BOUNS:.c=.o)
+
+.c.o:
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc -o $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ)
 
 clean:
 	$(RM) *.o
@@ -58,4 +66,6 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re
 

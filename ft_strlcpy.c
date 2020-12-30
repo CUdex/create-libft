@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 19:16:54 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/26 20:30:51 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/30 15:58:41 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 size_t		ft_strlcpy(char *dst, const char *src, size_t n)
 {
-	size_t len;
 	size_t i;
 
 	i = 0;

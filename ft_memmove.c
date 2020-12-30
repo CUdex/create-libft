@@ -6,11 +6,11 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 15:45:17 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/29 10:40:03 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/29 16:29:50 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {

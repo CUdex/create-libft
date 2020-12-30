@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:16:29 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/26 21:47:34 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/30 15:58:04 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ size_t		ft_strlcat(char *dst, const char *src, size_t n)
 
 	dst_idx = 0;
 	src_idx = 0;
-	if (size == 0)
+	if (n == 0)
 		return (ft_strlen(src));
 	while (dst[dst_idx])
 		dst_idx++;
 	if (dst_idx > n)
 		return (ft_strlen(src) + n);
-	while (src[src_idx] && (dst_idx + src_idx < size - 1))
+	while (src[src_idx] && (dst_idx + src_idx < n - 1))
 	{
 		dst[dst_idx + src_idx] = src[src_idx];
 		src_idx++;
