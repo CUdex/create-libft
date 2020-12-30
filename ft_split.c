@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 09:26:13 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/30 16:11:30 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/30 16:43:13 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	**ft_res_split(char **res, const char *s, char c, int chr_count)
 		}
 		if (!(res[j] = (char *)malloc(sizeof(char) * chr_size + 1)))
 			return (NULL);
-		ft_res_make(res[j], s, i, chr_size);
+		ft_split_make(res[j], s, i, chr_size);
 		j++;
 		chr_size = 0;
 	}
@@ -86,17 +86,4 @@ char	**ft_split(const char *s, char c)
 	if (!(res = (char **)malloc(sizeof(char) * chr_count + 1)))
 		return (NULL);
 	return (ft_res_split(res, s, c, chr_count));
-}
-
-int		main()
-{
-	char *s = "123a456a789a";
-	char c = 'a';
-	char **sc;
-
-	sc = ft_split(s, c);
-	printf("%s", sc[0]);
-	printf("%s", sc[1]);
-	printf("%s", sc[2]);
-	printf("%s", sc[3]);
 }
