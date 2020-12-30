@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 09:26:13 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/30 16:43:13 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/30 23:15:05 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		ft_chr_count(char const *s, char c)
 
 char	*ft_split_make(char *res, const char *s, int st_idx, int size)
 {
-	int i;
+	int	i;
 
 	i = 0; 
 	while (size)
@@ -49,9 +49,9 @@ char	*ft_split_make(char *res, const char *s, int st_idx, int size)
 
 char	**ft_res_split(char **res, const char *s, char c, int chr_count)
 {
-	int i;
-	int j;
-	int chr_size;
+	int	i;
+	int	j;
+	int	chr_size;
 
 	i = 0;
 	j = 0;
@@ -77,13 +77,13 @@ char	**ft_res_split(char **res, const char *s, char c, int chr_count)
 
 char	**ft_split(const char *s, char c)
 {
-	int	chr_count;
+	int		chr_count;
 	char	**res;
 
 	if (!s)
 		return (NULL);
 	chr_count = ft_chr_count(s, c);
-	if (!(res = (char **)malloc(sizeof(char) * chr_count + 1)))
+	if (!(res = (char **)malloc(sizeof(char *) * chr_count + 1)))
 		return (NULL);
 	return (ft_res_split(res, s, c, chr_count));
 }
