@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/27 23:48:09 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/31 16:26:35 by cryu             ###   ########.fr       */
+/*   Created: 2020/12/31 14:41:17 by cryu              #+#    #+#             */
+/*   Updated: 2020/12/31 15:35:18 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t			idx;
-	unsigned char	*s1_chr;
-	unsigned char	*s2_chr;
+	unsigned int	i;
+	size_t			len;
+	char			*str;
 
-	idx = 0;
-	s1_chr = (unsigned char *)s1;
-	s2_chr = (unsigned char *)s2;
-	if (n == 0)
-		return (0);
-	while (idx < n && s1_chr[idx] == s2_chr[idx])
-		idx++;
-	return (s1_chr[idx] - s2_chr[idx]);
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	len = ft_strlen(s);
+	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	while (s[i])
+	{
+		str[i] = f(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }

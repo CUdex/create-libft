@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/30 09:26:13 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/30 23:15:05 by cryu             ###   ########.fr       */
+/*   Updated: 2020/12/31 16:26:53 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_split_make(char *res, const char *s, int st_idx, int size)
 {
 	int	i;
 
-	i = 0; 
+	i = 0;
 	while (size)
 	{
 		res[i] = s[st_idx - size];

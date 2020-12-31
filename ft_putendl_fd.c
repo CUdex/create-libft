@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/27 23:48:09 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/31 16:26:35 by cryu             ###   ########.fr       */
+/*   Created: 2020/12/31 15:59:07 by cryu              #+#    #+#             */
+/*   Updated: 2020/12/31 16:00:46 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putendl(char *s, int fd)
 {
-	size_t			idx;
-	unsigned char	*s1_chr;
-	unsigned char	*s2_chr;
-
-	idx = 0;
-	s1_chr = (unsigned char *)s1;
-	s2_chr = (unsigned char *)s2;
-	if (n == 0)
-		return (0);
-	while (idx < n && s1_chr[idx] == s2_chr[idx])
-		idx++;
-	return (s1_chr[idx] - s2_chr[idx]);
+	if (fd < 0)
+		return ;
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }

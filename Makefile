@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2020/12/30 16:06:20 by cryu             ###   ########.fr        #
+#    Updated: 2020/12/31 16:10:38 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,12 @@ SRC = ft_isalpha.c \
 	  ft_substr.c \
 	  ft_strjoin.c \
 	  ft_strtrim.c \
-	  ft_split.c
+	  ft_split.c \
+	  ft_itoa.c \
+	  ft_strmapi.c \
+	  ft_putchar_fd.c \
+	  ft_putstr.c \
+	  ft_putnbr.c
 
 CC = gcc
 
