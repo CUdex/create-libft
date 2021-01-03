@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2020/12/31 16:10:38 by cryu             ###   ########.fr        #
+#    Updated: 2021/01/01 14:10:29 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,16 @@ SRC = ft_isalpha.c \
 	  ft_putstr.c \
 	  ft_putnbr.c
 
+BOUNS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
+
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
@@ -63,6 +73,9 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
+
+bouns: $(OBJ) $(BOUNS_OBJ)
+	ar rc $(NAME) $(OBJ) $(BOUNS_OBJ)
 
 clean:
 	$(RM) *.o
