@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2021/01/05 14:29:30 by cryu             ###   ########.fr        #
+#    Updated: 2021/01/05 21:52:53 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,8 +74,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
-bouns: $(OBJ) $(BOUNS_OBJ)
-	ar rc $(NAME) $(OBJ) $(BOUNS_OBJ)
+bonus: $(OBJ) $(BONUS_OBJ)
+	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean:
 	$(RM) *.o

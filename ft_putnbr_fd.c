@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/31 16:10:50 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/31 16:25:32 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/05 21:51:36 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ void	ft_putnbr_fd(int n, int fd)
 			ft_putchar_fd((n % 10) + '0', fd);
 		}
 		else
-			ft_putchar(n + '0', fd);
+			ft_putchar_fd(n + '0', fd);
 	}
 }
