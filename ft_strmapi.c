@@ -6,12 +6,11 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/31 14:41:17 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/31 15:35:18 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/05 09:09:10 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

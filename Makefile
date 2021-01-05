@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2021/01/01 14:10:29 by cryu             ###   ########.fr        #
+#    Updated: 2021/01/05 14:29:30 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,10 +43,10 @@ SRC = ft_isalpha.c \
 	  ft_itoa.c \
 	  ft_strmapi.c \
 	  ft_putchar_fd.c \
-	  ft_putstr.c \
-	  ft_putnbr.c
+	  ft_putstr_fd.c \
+	  ft_putnbr_fd.c
 
-BOUNS = ft_lstnew.c \
+BONUS = ft_lstnew.c \
 		ft_lstadd_front.c \
 		ft_lstsize.c \
 		ft_lstlast.c \
@@ -64,7 +64,7 @@ RM = rm -rf
 
 OBJ = $(SRC:.c=.o)
 
-BOUNS_OBJ = $(BOUNS:.c=.o)
+BONUS_OBJ = $(BONUS:.c=.o)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
