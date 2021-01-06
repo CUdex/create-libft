@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:16:29 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/30 15:58:04 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/06 16:48:37 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ size_t		ft_strlcat(char *dst, const char *src, size_t n)
 		src_idx++;
 	}
 	dst[dst_idx + src_idx] = '\0';
-	return (ft_strlen(dst) + ft_strlen(src));
+	return (dst_idx + ft_strlen(src));
 }

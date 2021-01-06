@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 16:54:12 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/27 17:05:21 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/06 16:50:07 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	size_t i;
+
+	i = 0;
+	while (i < ft_strlen(s) + 1)
 	{
-		if (*s == c)
-			return ((char *)s);
-		s++;
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -6,13 +6,13 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 00:12:38 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/24 00:13:36 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/06 14:13:40 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_ascii(int c)
+int		ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

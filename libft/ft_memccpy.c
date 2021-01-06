@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 17:39:31 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/29 10:38:55 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/06 17:15:09 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		dst_chr[idx] = src_chr[idx];
 		idx++;
-		if (src_chr[idx] == c)
+		if (src_chr[idx] == (unsigned char)c)
 		{
 			dst_chr[idx] = src_chr[idx];
 			return ((void *)&dst_chr[idx + 1]);
 		}
 	}
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 19:16:54 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/30 15:58:41 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/06 17:25:38 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t n)
 
 	i = 0;
 	if (n == 0)
-		return (0);
-	if (!dst && !src)
+		return (ft_strlen(src));
+	if (!dst || !src)
 		return (0);
 	while (src[i] && i + 1 < n)
 	{

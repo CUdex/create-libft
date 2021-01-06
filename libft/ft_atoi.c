@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 09:57:10 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/24 17:54:51 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/06 16:56:57 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ int		ft_isspace(char c)
 int		ft_atoi(const char *str)
 {
 	int i;
-	int nega;
-	int res;
+	long long nega;
+	long long res;
 
 	i = 0;
 	nega = 1;
@@ -47,5 +47,9 @@ int		ft_atoi(const char *str)
 		res = res * 10 + (str[i] - '0');
 		i++;
 	}
-	return (res * nega);
+	if (res * nega > 2147483647)
+		return (-1);
+	else if (res * nega < -2147483648)
+		return (0);
+	return ((int)(res * nega));
 }
