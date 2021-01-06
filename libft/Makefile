@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2021/01/05 21:52:53 by cryu             ###   ########.fr        #
+#    Updated: 2021/01/06 09:31:37 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,8 @@ SRC = ft_isalpha.c \
 	  ft_strmapi.c \
 	  ft_putchar_fd.c \
 	  ft_putstr_fd.c \
-	  ft_putnbr_fd.c
+	  ft_putnbr_fd.c \
+	  ft_putendl_fd.c
 
 BONUS = ft_lstnew.c \
 		ft_lstadd_front.c \
