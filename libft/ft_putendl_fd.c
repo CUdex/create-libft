@@ -6,13 +6,13 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/31 15:59:07 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/31 16:00:46 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/07 10:27:29 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (fd < 0)
 		return ;

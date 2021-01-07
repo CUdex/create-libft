@@ -6,13 +6,13 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/31 15:52:59 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/31 15:54:52 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/07 10:26:48 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
 	if (fd < 0)
 		return ;
