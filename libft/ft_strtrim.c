@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 12:14:06 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/29 14:42:32 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/07 16:05:14 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,25 +29,22 @@ int		ft_check(char s, const char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*tmp;
-	size_t	start_idx;
-	size_t	end_idx;
-	size_t	tmp_idx;
+	int		start_idx;
+	int		end_idx;
+	int		tmp_idx;
 
-	if (!s1)
-		return (0);
+	if (!s1 || !set)
+		return (NULL);
 	start_idx = 0;
-	end_idx = ft_strlen(s1) - 1;
+	end_idx = (int)ft_strlen(s1);
 	while (ft_check(s1[start_idx], set) && s1[start_idx])
 		start_idx++;
-	while (ft_check(s1[end_idx], set) && start_idx < end_idx)
+	while (ft_check(s1[end_idx - 1], set) && start_idx < end_idx)
 		end_idx--;
-	if (!start_idx && end_idx == ft_strlen(s1) - 1)
-		return (ft_strdup(s1));
-	if (start_idx >= end_idx)
-		return (0);
-	tmp = (char *)malloc(sizeof(char) * (end_idx - start_idx) + 1);
+	if (!(tmp = (char *)malloc(sizeof(char) * ((end_idx - start_idx) + 1))))
+		return (NULL);
 	tmp_idx = 0;
-	while (start_idx <= end_idx)
+	while (start_idx < end_idx)
 		tmp[tmp_idx++] = s1[start_idx++];
 	tmp[tmp_idx] = '\0';
 	return (tmp);

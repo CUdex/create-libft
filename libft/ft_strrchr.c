@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 17:14:32 by cryu              #+#    #+#             */
-/*   Updated: 2021/01/07 10:25:42 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/07 11:06:55 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t i;
+	int i;
 
-	i = ft_strlen(s);
+	i = (int)ft_strlen(s);
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)

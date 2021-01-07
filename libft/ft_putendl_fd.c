@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/31 15:59:07 by cryu              #+#    #+#             */
-/*   Updated: 2021/01/07 10:27:29 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/07 14:14:28 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (fd < 0)
+	if (fd < 0 || !(s))
 		return ;
 	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);

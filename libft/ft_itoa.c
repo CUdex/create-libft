@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/31 08:16:58 by cryu              #+#    #+#             */
-/*   Updated: 2020/12/31 14:38:22 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/07 13:50:02 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	*ft_itoa(int n)
 
 	n_long = n;
 	len = ft_count(n);
-	if (!(res = (char *)malloc(sizeof(char) * len + 1)))
+	if (!(res = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	ft_change_chr(res, n_long, len);
 	return (res);

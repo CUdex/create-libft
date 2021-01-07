@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/24 09:57:10 by cryu              #+#    #+#             */
-/*   Updated: 2021/01/06 16:56:57 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/07 14:03:26 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,15 @@ int		ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10 + (str[i] - '0');
-		i++;
+		if (res * nega > 2147483647)
+			return (-1);
+		else if (res * nega < -2147483648)
+			return (0);
+		else
+		{
+			res = res * 10 + (str[i] - '0');
+			i++;
+		}
 	}
-	if (res * nega > 2147483647)
-		return (-1);
-	else if (res * nega < -2147483648)
-		return (0);
 	return ((int)(res * nega));
 }
