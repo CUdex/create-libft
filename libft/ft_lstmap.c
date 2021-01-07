@@ -6,7 +6,7 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 15:24:13 by cryu              #+#    #+#             */
-/*   Updated: 2021/01/05 22:04:39 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/07 16:36:42 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	lst = lst->next;
 	while (lst)
 	{
-		if(!(tmp->next = ft_lstnew((*f)(lst->content))))
+		if (!(tmp->next = ft_lstnew((*f)(lst->content))))
 		{
 			ft_lstclear(&res, del);
 			return (NULL);
