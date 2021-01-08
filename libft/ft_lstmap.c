@@ -6,13 +6,13 @@
 /*   By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 15:24:13 by cryu              #+#    #+#             */
-/*   Updated: 2021/01/07 16:36:42 by cryu             ###   ########.fr       */
+/*   Updated: 2021/01/08 10:16:03 by cryu             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list *tmp;
 	t_list *res;
