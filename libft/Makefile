@@ -6,7 +6,7 @@
 #    By: cryu <cryu@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/23 09:15:58 by cryu              #+#    #+#              #
-#    Updated: 2021/01/08 11:02:46 by cryu             ###   ########.fr        #
+#    Updated: 2021/01/09 09:10:38 by cryu             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,7 @@ bonus: $(OBJ) $(BONUS_OBJ)
 	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean:
-	$(RM) *.o
+	$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
